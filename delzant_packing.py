@@ -11,13 +11,15 @@ if flag.lower() == 'y':
 else:
     Vertices = []
     n = int(input("Enter number of vertices : "))
-    
+
     # iterating till the range
     print("Enter integer vertex in counter-clockwise order, starting at the origin, in [x,y] format")
     for i in range(0, n):
         a = input()
         # delete non-numeric characters
-        result = re.sub('[^0-9]','', a)
+        # result = re.sub('[^0-9]','', a)
+        result = ''.join(c for c in a if c != '[' and c != ']')
+        result = result.split(',')
         # put coordinates in list format
         vertex = list(result)
         # make type integer
