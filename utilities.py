@@ -104,10 +104,6 @@ def get_edges(vertices):
         if i + 1 >= len:
             nA = vertices[0]
             nB = vertices[i - 1]
-        elif i - 1 < 0:
-            nA = vertices[i + 1]
-            nB = vertices[
-                i - 1]  # this conditional is the same as the next one, don't we want [n-1] instead of [i-1] ??
         else:
             nA = vertices[i + 1]
             nB = vertices[i - 1]
